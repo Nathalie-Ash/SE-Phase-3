@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://kit.fontawesome.com/e8fa2e31b4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="product.css">
+        
+</head>
+<body>
+    <body
+background="https://www.lookcycle.com/media/cache/product_large_thumbnail/page-categorie/bike-category-page-cover-fullscreen-background-2732x1536-full-bikes-2020-1.jpg"
+style="size: full">
+  
+    <div class="header">
+        <div class="navbar">
+          <img src="../images/Oh,Wheelie!.png" alt="OhWheelie" style ="width: 250px;">
+          <script>const wheelie = [{id: 1,
+                image: 'image/aa-1.jpg',
+                title: 'Bike',
+                price: '$20'}]</script>
+            
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Store</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-b">
+            <div class="search">
+                <input type="search" placeholder="Search...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <button class="cart"><i class="fa-solid fa-cart-shopping"></i><p><span id="display">0</span></p></button>
+        </div>
+    </div>
+    <!-- <div class="container"> -->
+        <div id="root"></div>
+       
+    <!-- </div> -->
+    <script>
+        const product = [
+            {
+                id: 1,
+                image: 'image1.jpg',
+                title: 'Road bike',
+                price: '$200'
+            },
+            {
+                id: 2,
+                image: 'image2.jpg',
+                title: 'Mountain bike',
+                price: '$500'
+            },
+            {
+                id: 3,
+                image: 'image3.jpg',
+                title: 'E-bike',
+                price: '$350'
+            },
+            {
+                id: 4,
+                image: 'image4.jpg',
+                title: 'Protective gear',
+                price: '$30'
+            },
+            {
+                id: 5,
+                image: 'image5.jpg',
+                title: 'Pet basket',
+                price: '$10'
+            },
+            {
+                id: 6,
+                image: 'image6.jpg',
+                title: 'LED light',
+                price: '$2'
+            },
+        ]
+        const categories = [...new Set(product.map((item)=>
+       {return item}))]
+
+       let img = document.getElementById('root')
+       img.innerHTML = categories.map((item)=>
+       {
+        var {image, title, price} = item;
+           return(
+           `<div class="box">
+                <div class="img-box">
+                    <img src=${image}></img>
+                </div>
+                <div class="left">
+                    <p>${title}</p>
+                    <h2>${price}</h2>
+                    <button class = "btn">Add To Cart</button>    
+                </div>
+            </div>`)
+       }).join('')
+       var count = 0;
+        var disp = document.getElementById("display");
+        const btns = document.querySelectorAll('.btn');
+        for (const btn of btns) {
+          btn.addEventListener('click', function() {
+            if (count < 10){
+              count++;
+            }
+            else{
+                alert("You can only add 10 items to your cart.");
+
+            }
+            disp.innerHTML = count;
+          });
+        } 
+       </script>
+    
+</body>
+</html>

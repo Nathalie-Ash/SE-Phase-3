@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<body background="https://www.lookcycle.com/media/cache/product_large_thumbnail/page-categorie/bike-category-page-cover-fullscreen-background-2732x1536-full-bikes-2020-1.jpg" style ="size: full"></body>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="checkout.css">
+    <script src="checkout.js"></script>
+
+</head>
+<body>
+    <div  id="form-container"  class="container">
+
+    <form action="" id = "check_form"   style="background-color: rgba(0, 0, 0, 0.9);">
+
+        <div class="row" style="color: white;">
+
+            <div class="col"style="color: white;">
+
+                <h3 class="title">billing address</h3>
+
+                <div class="inputBox">
+                    <span class="required-field">full name :</span>
+                    <input type="text" name ="name" placeholder="john doe" id="name">
+                </div>
+                <div class="inputBox">
+                    <span class="required-field">email :</span>
+                    <input type="email" name ="email" placeholder="example@example.com" id="email" >
+                    <p id="email-error" class="error-message" style="color: red;"></p>
+
+                </div>
+                <div class="inputBox">
+                    <span class="required-field">address :</span>
+                    <input type="text" name ="address" placeholder="room - street - locality" id="address" >
+                </div>
+                <div class="inputBox">
+                    <span class="required-field">city :</span>
+                    <input type="text" name = "city" placeholder="Beirut" id="city" >
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span class="required-field">state :</span>
+                        <input type="text" name ="state" placeholder="Lebanon" id="state" >
+                    </div>
+                    <div class="inputBox">
+                        <span class="required-field">zip code :</span>
+                        <input type="text" name ="zip code" placeholder="123 456" id="zip code" >
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col" style="color: white;">
+
+                <h3 class="title">payment</h3>
+
+                <div class="inputBox">
+                    <span>cards accepted :</span>
+                    <img src="../images/card_img.png" alt="">
+                </div>
+                <div class="inputBox">
+                    <span class="required-field">name on card :</span>
+                    <input type="text" name ="card name" placeholder="mr. john doe" id="name" >
+                </div>
+                <div class="inputBox">
+                    <span class="required-field">credit card number :</span>
+                    <input name ="card number" type="text" placeholder="1111-2222-3333-4444" maxlength="16" id="card number" >
+                </div>
+                <div class="inputBox">
+                    <span class="required-field">exp month :</span>
+                    <input type="text" name ="month" placeholder="january" id="month" >
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span class="required-field">exp year :</span>
+                        <input type="number" name ="year" placeholder="2022" min ="0" value ="2023" maxlength="4" id="year" >
+                    </div>
+                    <div class="inputBox">
+                        <span class="required-field">CVV :</span>
+                        <input type="text" name ="CCV" placeholder="1234" maxlength="4" id="CCV" >
+                    </div>
+                </div>
+
+            </div>
+    
+        </div>
+        <label  style="color: white;">
+            <input type="checkbox" checked="checked" name="sameadr" style="color: white;"> Shipping address same as billing
+        </label>
+
+        <button type="button" class="payByCash-btn">Pay on delivery instead</button>
+        <button type="button" id = "check"  class="submit-btn">proceed to checkout</button>
+
+       
+
+
+    </form>
+
+</div>
+    
+    
+</body>
+</html>
