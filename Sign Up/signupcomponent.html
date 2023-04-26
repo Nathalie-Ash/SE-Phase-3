@@ -1,0 +1,65 @@
+<script src="signup.js"></script>
+<form id="form" action="signup.php" method="post"></form>
+
+<body
+    background="https://www.lookcycle.com/media/cache/product_large_thumbnail/page-categorie/bike-category-page-cover-fullscreen-background-2732x1536-full-bikes-2020-1.jpg"
+    style="size: full">
+    <div  id="form-container"  class="container"
+        style="height: auto;border: 3px solid white; background-color: rgba(0, 0, 0, 0.9);width: 400px;position: absolute;left: 50%;top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); border-radius: 5px; font-family: me;">
+
+        <div class="imgcontainer" style="height: 50px;padding-top: 7px;">
+            <img src="../images/Oh,Wheelie!.png"
+                style='height: 100%; width: 100%; object-fit: contain' alt="img">
+        </div>
+        <div class="inn" style="text-align: center;">
+            <p style="color: white;font-size: x-large;">Welcome!</p>
+            <label id="Name" for="Name" style="color: white;"> <b>Name</b></label>
+            <br>
+            <input type="text" placeholder=" Enter Name" name="Name" required>
+            <br><br>
+            <label id="age" for="age" style="color: white;"> <b>Age</b></label>
+            <br>
+            <input type="number" placeholder=" Enter Age" name="age" required>
+            <p id="age-error" class="error-message" style="color: red;"></p>
+            <label id="phonenumber" for="phonenumber" style="color: white;"> <b>Phone Number</b></label>
+            <br>
+            <input type="tel" placeholder=" Enter Phone Number" name="phone" required>
+            <p id="phone-error" class="error-message" style="color: red;"></p>
+            <label id="email" for="email" style="color: white;"> <b>Email</b></label>
+            <br>
+            <input type="text" placeholder=" Enter Email" name="email" required>
+            <p id="email-error" class="error-message" style="color: red;"></p>
+            <label style="margin: 10px;color: white;" id="password" for="password"> <b>Password</b></label>
+            <br>
+            <input type="password" placeholder=" Enter Password" name="password" required>
+            <p id="pass-error" class="error-message" style="color: red;"></p>
+            <label style="margin: 10px;color: white;" id="confirmPassword" for="confirmPassword"> <b> </b></label>
+            <br>
+
+            <input type="password" placeholder=" Confirm Password" name="confirmPassword" required>
+            <p id="confirm-pass-error" class="error-message" style="color: red;"></p>
+
+            <!-- <br><br> Inserted line break element here -->
+            <button id="signup" type="button" style="width: 170px; ">Sign Up</button>
+            <!-- Added margin to the left of the button -->
+            <br>
+            <!--<label style="color: white;">
+            <input type="checkbox" checked="checked" name="remember" > Remember me     
+            </label> -->
+            <div style="margin-top: 10px;">
+                <p style="color: white;">Or</p>
+                <button type="button"
+                    style="background-color: #3B5998; color: white; border: none; padding: 10px 20px; border-radius: 5px;">Sign
+                    Up with Facebook</button>
+                <button type="button"
+                    style="background-color: #DB4437; color: white; border: none; padding: 10px 20px; border-radius: 5px; margin-left: 10px;">Sign
+                    Up with Google</button>
+            </div>
+            <p class="login" style="color: white;">Already have an account?<a href="login.html"> Login here</a></p>
+        </div>
+        <!-- <div class="contains" style="width: 200; text-align: center;color: rgba(255, 255, 255, 0.9);" >
+           
+        </div> -->
+
+    </div>
+</body>
